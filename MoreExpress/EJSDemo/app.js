@@ -2,7 +2,7 @@ var express = require("express");  //create a variable for express library to ca
 var app = express();  // create variable to run express()
 
 
-app.use(express.static("public"));  //tells express where to find the public folder.
+app.use(express.static("public"));  //tells express where to find the public folder (for CSS).
 app.set("view engine", "ejs");  // shortcut to stop using the ejs extenstion on files ("home.ejs")
 
 app.get("/", function(req, res){  //standard request.
