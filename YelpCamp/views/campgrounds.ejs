@@ -1,0 +1,23 @@
+<% include partials/header %> 
+
+<h1>This is the Camp Grounds Page</h1>
+
+<p>List of campgounds will go here!</p>
+
+
+<% campgrounds.forEach(function(camp){ %>
+    <div> 
+        <h4> <%= camp.name %> </h4>
+        <img src="<%= camp.image %>"></img>
+    </div>
+    
+    <% });%>
+
+<% include partials/footer %>
+    
+    
+     
+   
+    
+    
+
