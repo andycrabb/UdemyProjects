@@ -50,10 +50,10 @@ app.post("/campgrounds", function(req, res){
     
 });
 
-// app.listen(8081, function(){
-//      console.log("Yelp Server is Running!");
-// });
-
-app.listen(process.env.PORT, process.env.IP, function(){
-     console.log("Yelp Server is Running!");
+app.listen(8081, function(){
+console.log("Yelp Server is Running!");
 });
+
+//app.listen(process.env.PORT, process.env.IP, function(){
+//     console.log("Yelp Server is Running!");
+//j});
