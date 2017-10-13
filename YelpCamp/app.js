@@ -66,6 +66,6 @@ app.get("/campgrounds/:id", function(req, res){
     });
 })
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(process.env.PORT || 8081, process.env.IP, function(){
    console.log("The YelpCamp Server Has Started!");
 });
