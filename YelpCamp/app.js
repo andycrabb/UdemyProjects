@@ -68,10 +68,6 @@ app.get("/campgrounds/:id", function(req, res){
     });
 })
 
-<<<<<<< HEAD
-app.listen(process.env.PORT || 8081, process.env.IP,  function(){
-=======
 app.listen(process.env.PORT || 8081, process.env.IP, function(){
->>>>>>> b4b9b8c89ef1b2a6a2c6abd03e07771a0379e55f
    console.log("The YelpCamp Server Has Started!");
 });
