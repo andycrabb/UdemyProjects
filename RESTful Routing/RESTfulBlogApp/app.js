@@ -31,12 +31,24 @@ app.get("/blogs",function(req,res){
     });
 });
 
-//blog
+//NEW ROUTE
+app.get("/blogs/new", function(req, res){
+    res.render("new");
+});
 
+//CREATE ROUTE
+app.post("/blogs", function(req, res){
+    //create blog
+    Blog.create(req.body.blog, function(err, newBlog){
+        if(err){
+            res.render("new");
+        }else {
+            //then redirect to the index
+            res.redirect("/blogs");
+        }
+    });
+});
 
-//image
-//body
-//created
 
 app.listen(process.env.PORT || 8081, process.env.IP, function(){
     console.log("SERVER IS RUNNING!");
