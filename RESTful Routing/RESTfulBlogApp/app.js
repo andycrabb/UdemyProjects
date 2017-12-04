@@ -49,6 +49,35 @@ app.post("/blogs", function(req, res){
     });
 });
 
+//Show Route
+
+app.get("/blogs/:id", function(req, res) {
+    Blog.findById(req.params.id, function(err, foundBlog){
+        if(err){
+            res.redirect("/blogs");
+        } else {
+            res.render("show", {blogs: foundBlog});
+        }
+    });
+});
+
+//EDIT ROUTE
+app.get("/blogs/:id/edit", function(req, res){
+    Blog.findById(req.params.id, function(err, foundBlog) {
+        if(err){
+            res.redirect("/blogs");
+        } else {
+            res.render("edit", {blogs: foundBlog});
+        }
+    });
+});
+
+//UPDATE ROUTE
+app.put("/blogs/:id", function(req, res){
+   res.send("Update Route");
+});
+
+
 
 app.listen(process.env.PORT || 8081, process.env.IP, function(){
     console.log("SERVER IS RUNNING!");
