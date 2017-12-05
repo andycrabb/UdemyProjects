@@ -8,8 +8,11 @@
                 <span><%= blogs.created.toDateString() %></span>
             </div>
             <div class="description">
-                <p><%= blogs.body %></p>
+                <p><%- blogs.body %></p>
             </div>
+                <form action="/blogs/<%= blogs._id %>?_method=DELETE" method="POST">
+                    <button class="ui red basic button" type="submit">Delete</button>
+                </form>
         </div>
     </div>
 </div>
