@@ -3,7 +3,7 @@ var express     = require("express"),
     bodyParser  = require("body-parser"),
     mongoose    = require("mongoose"),
     Campground  = require("./models/campground"),
-    seedDB      = require("./seeds")
+    seedDB      = require("./seeds");
 
 seedDB();
 mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true,});
@@ -32,7 +32,7 @@ app.post("/campgrounds", function(req, res){
     var name = req.body.name;
     var image = req.body.image;
     var desc = req.body.description;
-    var newCampground = {name: name, image: image, description: desc}
+    var newCampground = {name: name, image: image, description: desc};
     // Create a new campground and save to DB
     Campground.create(newCampground, function(err, newlyCreated){
         if(err){
@@ -46,7 +46,7 @@ app.post("/campgrounds", function(req, res){
 
 //NEW - show form to create new campground
 app.get("/campgrounds/new", function(req, res){
-   res.render("new.ejs"); 
+   res.render("new.ejs");
 });
 
 // SHOW - shows more info about one campground
@@ -62,6 +62,17 @@ app.get("/campgrounds/:id", function(req, res){
         }
     });
 });
+
+//========================
+//COMMENTS ROUTES
+//=======================
+
+app.get("campgrounds/:id/comments/new", function(req, res) {
+    //res.render("/comments/new");
+    res.render("This will be the comment Row");
+});
+
+
 
 app.listen(process.env.PORT || 8081, process.env.IP, function(){
    console.log("The YelpCamp Server Has Started!");
