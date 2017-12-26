@@ -75,7 +75,7 @@ app.get("/campgrounds/:id/comments/new", function(req, res){
         } else {
              res.render("comments/new", {campground: campground});
         }
-    })
+    });
 });
 
 app.post("/campgrounds/:id/comments", function(req, res){
