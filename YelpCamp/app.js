@@ -99,7 +99,9 @@ app.post("/campgrounds/:id/comments", function(req, res){
 
 
 
-app.listen(process.env.PORT || 8081, process.env.IP, function(){
-   console.log("The YelpCamp Server Has Started!");
+
 });
+
+app.listen(process.env.PORT || 8081, process.env.IP, function(){
+    console.log("The YelpCamp Server Has Started!");
 });
