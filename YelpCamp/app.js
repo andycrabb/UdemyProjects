@@ -104,7 +104,7 @@ var express     = require("express"),
     mongoose    = require("mongoose"),
     Campground  = require("./models/campground"),
     Comment     = require("./models/comment"),
-    seedDB      = require("seeds");
+    seedDB      = require("/seeds");
     
 mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true,});
 app.use(bodyParser.urlencoded({extended: true}));
