@@ -4,21 +4,21 @@ var Comment  = require("./models/comment");
 
 var data = [
     {
-        name: "Cloud's Rest", 
+        name: "Cloud's Rest",
         image: "https://farm4.staticflickr.com/3795/10131087094_c1c0a1c859.jpg",
-        description: "blah blah blah"
+        description: "bcum voluptates sapiente beatae asperiores. Animi placeat possimus consequuntur sapiente ipsum, eaque itaque voluptas. Earum cumque delectus cupiditate magnam quia. Totam porro doloribus distinctio eveniet sequi cumque a praesentium! blah blah blah"
     },
     {
-        name: "Desert Mesa", 
+        name: "Desert Mesa",
         image: "https://farm4.staticflickr.com/3859/15123592300_6eecab209b.jpg",
-        description: "blah blah blah"
+        description:"cum voluptates sapiente beatae asperiores. Animi placeat possimus consequuntur sapiente ipsum, eaque itaque voluptas. Earum cumque delectus cupiditate magnam quia. Totam porro doloribus distinctio eveniet sequi cumque a praesentium!"
     },
     {
-        name: "Canyon Floor", 
+        name: "Canyon Floor",
         image: "https://farm1.staticflickr.com/189/493046463_841a18169e.jpg",
-        description: "blah blah blah"
+        description: "bcum voluptates sapiente beatae asperiores. Animi placeat possimus consequuntur sapiente ipsum, eaque itaque voluptas. Earum cumque delectus cupiditate magnam quia. Totam porro doloribus distinctio eveniet sequi cumque a praesentium!lblah blah blah"
     }
-]
+];
 
 function seedDB(){
     //remove all campgrounds

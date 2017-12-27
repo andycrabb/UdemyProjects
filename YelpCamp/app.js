@@ -105,10 +105,11 @@ var express     = require("express"),
     Campground  = require("./models/campground"),
     Comment     = require("./models/comment"),
     seedDB      = require("./seeds");
-    
+
 mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true,});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
 seedDB();
 
 app.get("/", function(req, res){
@@ -133,7 +134,7 @@ app.post("/campgrounds", function(req, res){
     var name = req.body.name;
     var image = req.body.image;
     var desc = req.body.description;
-    var newCampground = {name: name, image: image, description: desc}
+    var newCampground = {name: name, image: image, description: desc};
     // Create a new campground and save to DB
     Campground.create(newCampground, function(err, newlyCreated){
         if(err){
@@ -157,7 +158,7 @@ app.get("/campgrounds/:id", function(req, res){
         if(err){
             console.log(err);
         } else {
-            console.log(foundCampground)
+            console.log(foundCampground);
             //render show template with that campground
             res.render("campgrounds/show", {campground: foundCampground});
         }
