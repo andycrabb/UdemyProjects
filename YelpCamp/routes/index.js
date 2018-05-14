@@ -8,6 +8,10 @@ router.get("/", function(req, res){
     res.render("landing");
 });
 
+router.get("/register", function(req, res){
+    res.render("register");
+});
+
 router.post("/register", function(req, res){
     var  newUser = new User({username: req.body.username});
     User.register(newUser, req.body.password, function(err, user){
