@@ -10,7 +10,7 @@ var express     = require("express"),
     seedDB      = require("./seeds");
 
 var commentRoutes   = require("./routes/comments"),
-    camgroundRoutes = require("./routes/campgrounds"),
+    campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes     = require("./routes/index");
 
 mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true,});
