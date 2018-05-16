@@ -18,7 +18,7 @@ mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true,});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
-seedDB();
+//seedDB();
 
 //passport configuration
 app.use(require("express-session")({
@@ -41,6 +41,6 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/", indexRoutes);
 
-app.listen(process.env.PORT || 8081, process.env.IP, function(){
+app.listen(8080, "127.0.0.1", function(){
     console.log("The YelpCamp Server Has Started!");
 });

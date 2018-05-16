@@ -28,7 +28,7 @@ function seedDB(){
         }
         console.log("removed campgrounds");
 
-// add a few campgounds
+ //add a few campgounds
         data.forEach(function(seed){
         Campground.create(seed, function(err, campground) {
             if(err) {
