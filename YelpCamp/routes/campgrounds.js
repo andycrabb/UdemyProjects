@@ -55,6 +55,11 @@ router.get("/:id", function(req, res){
     });
 });
 
+//EDIT CAMPGROUND ROUTE
+router.get("/:id/edit", function(req, res){
+    res.render("campground/edit" );
+});
+//UPDATE CAMPGROUND ROUTE!
 function isLogedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();
