@@ -42,7 +42,7 @@ router.post("/", isLogedIn, function(req, res){
        }
    });
    });
-
+//middleware
 function isLogedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();
